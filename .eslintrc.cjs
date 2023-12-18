@@ -1,36 +1,34 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2021: true },
   extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended",
-    "eslint-config-prettier",
-    "prettier",
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+    'eslint-config-prettier',
+    'plugin:@typescript-eslint/recommended',
+    'prettier'
   ],
-  ignorePatterns: ["dist", ".eslintrc.cjs", "vite.config.ts"],
-  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
-  settings: { react: { version: "18.2" } },
-  plugins: ["react-refresh", "prettier"],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.ts'],
+  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+  settings: { react: { version: '18.2' } },
+  plugins: ['react-refresh', '@typescript-eslint', 'prettier'],
   rules: {
-    "react-refresh/only-export-components": [
-      "warn",
-      { allowConstantExport: true },
-    ],
-    "prettier/prettier": [
-      "warn",
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'prettier/prettier': [
+      'warn',
       {
-        arrowParens: "always",
+        arrowParens: 'always',
         semi: false,
-        trailingComma: "none",
+        trailingComma: 'none',
         tabWidth: 2,
-        endOfLine: "auto",
+        endOfLine: 'auto',
         useTabs: false,
         singleQuote: true,
         printWidth: 120,
-        jsxSingleQuote: true,
-      },
-    ],
-  },
-};
+        jsxSingleQuote: true
+      }
+    ]
+  }
+}
